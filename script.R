@@ -8,11 +8,11 @@ X <- as.matrix( X )
 
 # cost function
 costJ <- function( beta ) {
-  cost <- ???
+  cost <- ( 1 / 2 ) * ( abs( X * beta - Y ) ^ 2 )
     return( cost )
 }
 # gradient function
-gradJ <- function(beta){
-  grad <- ???
-    return(grad)
+gradJ <- function( beta ){
+  grad <- t( X ) * ( X * beta - Y )
+    return( grad )
 }
